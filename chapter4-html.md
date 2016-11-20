@@ -865,7 +865,7 @@ The code snippet:
 ```
 <blockquote cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/blockquote">
   <p>
-    The HTML <blockquote> Element (or HTML Block Quotation Element) indicates that the enclosed text is an extended quotation
+    The HTML blockquote Element (or HTML Block Quotation Element) indicates that the enclosed text is an extended quotation
   </p>
 </blockquote>
 ```
