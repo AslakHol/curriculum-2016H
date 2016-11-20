@@ -182,10 +182,11 @@ An ordered list is enclosed in the `<ol></ol>` element. You write an ordered lis
 </ol>
 ```
 ... which gives the following output:
+
 1. List element
-* List elementer
-* Even list elementer
-* List elementest
+2. List elementer
+3. Even list elementer
+4. List elementest
 
 The unordered list is enclosed in the `<ul></ul>` element. You write an unordered list as such:
 
