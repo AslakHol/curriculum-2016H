@@ -35,7 +35,7 @@ The `<html>` element encloses everything on the page. All your code should be wi
 The child elements of `<html>` is the `<head>` and `<body>` elements.
 
 #### Head
-This element contains information about the document, and will not be rendered in the browsers. Examples are link to resources, metadata, and the title shown in browser tabs.
+This element contains information about the document, and will not be rendered in the browser. Examples are link to resources, metadata, and the title shown in browser tabs.
 
 Below are some useful tags to know:
 
@@ -140,11 +140,11 @@ When writing about math or chemistry, or any other topic in need of superscript 
 In HTML, we have white space collapsing. That means that you can write as many white spaces after each other that you  like, and they will be treated as one white space. The same is true for line breaks. Coders can use this to organize their coding, making it easier to read. E.g.
 
 ```
-The whites                doesn't scare me
+The white space                doesn't scare me
 ```
 will be rendered as:
 
-The whites doesn't scare me
+The white space doesn't scare me
 
 You can use this to indent your code, so that you will have a structure similar to this:
 
@@ -262,7 +262,7 @@ We would then have to write:
 <a href="products/starblaster.html">Starblaster</a>
 ```
 
-If we want to link from starblaster.html to index.html, we would have to write
+If we want to link from starblaster.html to index.html, we would have to write:
 
 ```
 <a href="../index.html">Home</a>
@@ -324,7 +324,7 @@ Images in HTML is included using the `<img>` tag. You reference the image using 
 └── index.html
 ```
 
-... you would write it like this, when referenceing to the image from `starblaster.html`:
+... you would write it like this, when referencing to the image from `starblaster.html`:
 
 ```
 <img src="../images/starblaster.jpg">
@@ -346,7 +346,7 @@ As `<img>` is a inline element, it will be placed on the same line as where you 
 
 When you are using images, think of these three guidelines (some will call them rules):
 1. <b>Save the image in the right format</b>  
-The fileformats JPG, gif and png are the most often used formats, and has the widest support among browsers. If you choose the wrong image format your images might not look as sharp as they should, and the web page might load slower.
+The file formats JPG, gif and png are the most often used formats, and has the widest support among browsers. If you choose the wrong image format your images might not look as sharp as they should, and the web page might load slower.
 * <b>Save the image at the right size</b>  
 You should save the image at the same width and height as it will appear on the website (measured in pixels). If the image is smaller than the width or height that you have specified, the image can be distorted and stretched, and the pixels will be visible. If the image is larger than the width and height you have specified, the image will take longer to load on the page.
 * <b>Measure images in pixels</b>  
@@ -509,7 +509,7 @@ Sometimes you might want to have columns or rows, or both, that stretch across m
 
 On the `<th>` and `<td>` elements you would then use the `colspan` or `rowspan` attributes.
 
-It might be hard to separate the two, so here are some examples. First out is `cospan`. The following code:
+It might be hard to separate the two, so here are some examples. First out is `colspan`. The following code:
 
 ```
 <table>
