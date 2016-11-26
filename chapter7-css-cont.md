@@ -666,10 +666,18 @@ The :lang pseudo class matches elements based on the language the element is det
 ```
 
 ```css
-:lang(en) > q { quotes: '\201C' '\201D' '\2018' '\2019'; }
-:lang(fr) > q { quotes: '« ' ' »'; }
-:lang(de) > q { quotes: '»' '«' '\2039' '\203A'; }
+:lang(en) > q {
+   quotes: '\201C' '\201D' '\2018' '\2019';
+ }
+:lang(fr) > q {
+   quotes: '« ' ' »';
+}
+:lang(de) > q {
+   quotes: '»' '«' '\2039' '\203A';
+}
 ```
+
+![Different language quotes](images/quotes_language.png)
 
 ### Overflow
 The overflow property specifies whether to clip content, render scrollbars or just display content when it overflows its block level container.
