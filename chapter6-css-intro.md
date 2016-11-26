@@ -197,7 +197,7 @@ Remember that there is a case of precedence with classes and IDs. As IDs are mor
 <div class="class-name" id="id-name">Some text</div>
 ```
 
-the font color, described by the property `color` and the following value, would be black. It does not matter if the ID rule is written before or after the class rule.
+The font color, described by the property `color` and the following value, would be black. It does not matter if the ID rule is written before or after the class rule.
 
 It might seem silly to have two ways of referencing an element. After all, classes can be used to reference one element (but not vice versa). There are some advantages to using IDs that should be noted. As it only references one element, they are more efficient to use, compared to classes. This is because with classes the entire DOM has to be scanned for the element, while when the ID is found, there is no longer necessary to look for it. When we will learn about JavaScript, you will also see that IDs are necessary to reference the correct element to manipulate (more on that later).
 
@@ -219,7 +219,7 @@ There is no problem, as seen above, to combine classes and IDs. You can then hav
 ```
 
 #### Other selectors
-You have now seen how we select classes and IDs, but it is possible to select several element at once, or select child elements. Just watch!
+You have now seen how we select classes and IDs, but it is possible to select several element at once, or select child elements.
 
 ##### Universal selector
 The `*` selector applies to all elements in the document.
@@ -326,7 +326,7 @@ There is an ocean of possibilities when choosing a color. You will find colors t
 All HTML elements can be considered a box, and each box (HTML element) has the properties margin, border, padding and content. Together these properties is called the box model.
 
 #### The box model
-![Box model](images/box_model.svg "Box model")
+![Box model](images/box_model.svg)
 
 The content area is the area that contains the content of the element, e.g. text or image. It can have a background color or an image (an image will hide the background color). Text and images are located inside the content edge. If the CSS box-sizing property is set to default, the properties width, min-width, max-width, height, min-height and max-height control the content size. If you do not specify at least one pair of these properties, the content's size will determine the size.
 
