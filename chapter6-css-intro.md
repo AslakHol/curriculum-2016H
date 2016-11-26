@@ -356,7 +356,7 @@ Border-style can be amongst other be:
 
 See more styles with examples at  [MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/border-style). The border-color property's value is set using any way of representing color, e.g. hex or rgb. Border-width defines the width of the border, and the value is described using a measure of size, e.g. px. The following code snipped would make a 4px wide dashed and blue border:
 
-```CSS
+```css
 border-width: 4px;
 border-style: dashed;
 border-color: #0060A3;
@@ -389,11 +389,7 @@ First we need to talk a bit about typeface terminology:
 #### Terminology
 Firstly, there are three typeface classifications you should know about (even though there are several more), namely <i>serif</i>, <i>sans-serif</i> and <i>monospace</i>.
 
-<p style="Font-family: Georgia">Serif fonts have extra detail on the ends of the main strokes of the letteres. These details are known as serifs. In print, serif fonts were traditionally used for long texts because they where considered easier to read. The font family used for this paragraph is Georgia.</p>
-
-<p style="Font-family: Helvetica">Sans-serif fonts have straight ends to letters, and therefore have a much cleaner design. Screens have a lower resolution than print. So, if the text is small, sans-serif fonts can be clearer to read. The font family used for this paragraph is Helvetica</p>
-
-<p style="Font-family: Courier">Every letter in a monospaced (or fixed width) font is the same width (non-monospace fonts have different widths). Monospace fonts are commonly used for code because they align nicely, making the text easier to follow. The font family used for this paragraph is Courier.</p>
+![Text with different fonts](images/different_font_text.png)
 
 Secondly, font families can have different weights and styles. The weights are <i>light</i>, <i>medium</i>, <i>regular</i>, <i>bold</i> and <i>black</i>, and describes the thickness of the font. The style of the font can be <i>normal</i>, <i>italic</i> or <i>oblique</i>. We also have size, how large each letter is.
 
