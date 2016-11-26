@@ -209,15 +209,17 @@ CSS has the following position schemes that allow you to control the layout of a
 #### Normal flow
 Every block element appears on a new line, causing each item to appear lower down on the page than the previous one. Even if you specify the width of the boxes and there is space for two elements to sit side-by-side, they will not appear next to each other. This is the default behavior (unless you tell the browser to do something else).
 
-TODO: INSERT IMAGE OF NORMAL FLOW
-
 In normal flow, each block-level element sits on top of the next one. Since this is the default way in which browsers treat HTML elements, you do not need a CSS property to indicate that elements should appear in normal flow, but the syntax would be `position: static;`.
 
-In the example below, the width property for the heading has not been specified, so you can see how it stretches the width of the entire browser window by default. The paragraphs are restricted to 450 pixels wide. This shows how the elements in normal flow start on a new line even if they do not take up the full width of the browser window. <i>All of the examples demonstrated in this section, and the rest about document flow, will use a similar HTML structure.</i>
+In the example below, the width property for the heading has not been specified, so you can see how it stretches the width of the entire body element by default. The paragraphs are restricted to 300 pixels wide. This shows how the elements in normal flow start on a new line even if they do not take up the full width of the body element. <i>All of the examples demonstrated in this section, and the rest about document flow, will use a similar HTML structure.</i>
 
 ```html
 <body>
   <h1>Positioning</h1>
+  <p>
+
+  </p>
+
   <p>
 
   </p>
@@ -228,19 +230,26 @@ In the example below, the width property for the heading has not been specified,
 body {
     width: 750px;
     font-family: Arial, Verdana, sans-serif;
-    color: #040404;
-    background-color: #FCFCFC;
+    color: black;
+    border: 1px solid;
+    border-color: black;
 }
 
 h1 {
-  background-color: #EFEFEF;
+  background-color: lightgray;
   padding: 10px;
 }
 
 p {
-  width: 450px;
+  width: 300px;
+  height: 25px;
+  background-color: yellow;
+  border-color: black;
+  border: 1px solid;
 }
 ```
+
+![Normal flow](images/normal_flow.png)
 
 #### Relative positioning
 This moves an element from the position it will be in normal flow, shifting it to the top, right, bottom, or left of where it would have been placed. This does not affect the position of surrounding elements; they stay in the position they would be in in normal flow.
