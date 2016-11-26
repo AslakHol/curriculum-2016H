@@ -112,6 +112,8 @@ ul.inside {
 }
 ```
 
+![Inside/Outside list](images/outsideinsidelist.png)
+
 <!-- Github strips CSS from MD files they render, so this won't display properly to the reader -->
 
 <ul style="list-style-position: outside">
