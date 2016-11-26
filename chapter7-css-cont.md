@@ -8,6 +8,8 @@ The `list-style-type` property allows you to control the shape or style of a bul
 
 For an unordered list you can use the following values:
 
+<!-- Github strips CSS from MD files they render, so this won't display properly to the reader -->
+
 <ul>
   <li style="list-style-type: none;">none</li>
   <li style="list-style-type: disc;">disc</li>
@@ -34,6 +36,8 @@ The code for this list looks like this:
 ```
 
 For an ordered (numbered) list you can use the following values:
+
+<!-- Github strips CSS from MD files they render, so this won't display properly to the reader -->
 
 <ol>
   <li style="list-style-type: decimal;">decimal</li>
@@ -107,6 +111,8 @@ ul.inside {
   list-style-position: inside;
 }
 ```
+
+<!-- Github strips CSS from MD files they render, so this won't display properly to the reader -->
 
 <ul style="list-style-position: outside">
   <li>It's really hard to come up with something funny to write in these list elements.</li>
