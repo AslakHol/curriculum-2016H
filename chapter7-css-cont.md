@@ -421,7 +421,7 @@ p {
 }
 ```
 
-TODO: IMage of example
+TODO: IMAGE OF EXAMPLE
 
 Setting the height of the paragraphs to be the same height as the tallest paragraph would solve this issue, but it is rarely suited to real world designs where the amount of text in a paragraph or column may vary. It is more common to use the `clear` property (discussed further down) to solve this.
 
@@ -461,6 +461,9 @@ p {
 }
 ```
 
+TODO: IMAGE OF EXAMPLE
+
+
 #### Z-index
 When you use relative, fixed or absolute positioning, boxes can overlap. If boxes do overlap, the elements that appear later in the HTML code sit on top of those that are earlier in the page.
 
@@ -475,7 +478,6 @@ What will the color of the intro element be?
 
 ```HTML
 <body>
-
   <h1>Hello inheritance</h1>
   <p class="intro">
     Let me introduce you to the world of inheritance.
@@ -499,11 +501,12 @@ h1{
 }
 
 .intro{
-  color: #FAA21B;
+  color: orange;
 }
 ```
+![Inheritance](images/inheritance.png)
 
-That is correct, as intro has specified it's own `color` property, that rule will be chosen (because it's more specific).
+Orange is correct. Since intro has specified it's own `color` property, that rule will be chosen (because it's more specific).
 
 ### More pseudo classes
 In the previous chapter you learned the pseudo classes to style something on hover. In this chapter you will learn some more. We start with refreshing the syntax:
@@ -522,13 +525,13 @@ In a list with list elements, the following code would affect every odd numbered
 
 ```HTML
 <ul>
-  <li>li:nth-child(2n+1)</li>
-  <li>li:nth-child(odd)</li>
-  <li>li:nth-child(2n)</li>
-  <li>li:nth-child(even)</li>
-  <li>li:nth-child(0n+1)</li>
-  <li>li:nth-child(1)</li>
-  <li>li:nth-child(-n+3)</li>
+  <li>1</li>
+  <li>2</li>
+  <li>3</li>
+  <li>4</li>
+  <li>5</li>
+  <li>6</li>
+  <li>7</li>
 </ul>
 ```
 
@@ -537,6 +540,9 @@ li:nth-child(2n+1){
   color: blue;
 }
 ```
+
+![Odd numbered list](images/odd_list.png)
+
 
 * **tr:nth-child(2n+1)**  
 Represents the odd rows of an HTML table.
@@ -562,6 +568,8 @@ li:last-child {
   color: blue;
 }
 ```
+
+![Last child](images/last_child.png)
 
 #### :required
 The `:required` pseudo class represents any `<input>` element that has the `required` attribute set on it. This allows forms to easily indicate which fields must have valid data before the form can be submitted.
@@ -619,7 +627,9 @@ input:enabled {
 The :disabled pseudo class represents any disabled element. An element is disabled if it can't be activated (e.g. selected, clicked on or accept text input) or accept focus. The element also has an enabled state, in which it can be activated or accept focus.
 
 ```css
-input[type="text"]:disabled { background: #ccc; }
+input[type="text"]:disabled {
+   background: #ccc;
+ }
 ```
 
 #### :valid and :invalid
