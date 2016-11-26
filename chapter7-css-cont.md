@@ -90,11 +90,11 @@ Lists are indented into the page by default and the `list-style-position` proper
 ```html
 <ul class="outside">
   <li>It's really hard to come up with something funny to write in these list elements.</li>
-  <li>Thus I wrote this boring text in stead. The width of the list has been limited to 250 px, so that you see the effect of outside vs inside.</li>
+  <li>Thus I wrote this boring text instead. The width of the list has been limited to 250 px, so that you see the effect of outside vs inside.</li>
 </ul>
 <ul class="inside">
   <li>It's really hard to come up with something funny to write in these list elements.</li>
-  <li>Thus I wrote this boring text in stead. The width of the list has been limited to 250 px, so that you see the effect of outside vs inside.</li>
+  <li>Thus I wrote this boring text instead. The width of the list has been limited to 250 px, so that you see the effect of outside vs inside.</li>
 </ul>
 ```
 
