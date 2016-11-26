@@ -282,19 +282,19 @@ p.example{
 ![Relative Position](images/relative_position.png)
 
 #### Absolute positioning
-This positions the element in relation to its containing element. It is taken out of normal flow, meaning that it does not affect the position of any surrounding elements (as they simply ignore the space it would have taken up). Absolutely positioned elements move as users scroll up and down the page.
+This positions the element in relation to its closest positioned (not static) parent. It is taken out of normal flow, meaning that it does not affect the position of any surrounding elements (as they simply ignore the space it would have taken up). Absolutely positioned elements move as users scroll up and down the page.
 
-TODO: INSERT IMAGE OF ABSOUTE positioning
+When the `position` property is given a value of `absolute` the box is taken out of normal flow and no longer affects the position of other elements on the page (they act like it is not there). The box offset properties (`top`, `bottom`, `left` or `right`) specify where the element should appear in relation to its containing element.
 
-The heading is positioned to the top right, and the paragraphs start at the top of the screen (as if the heading were not there).
-
-When the `position` property is given a value of `absolute`. the box is taken out of normal flow and no longer affects the position of other elements on the page (they act like it is not there). The box offset properties (`top`, `bottom`, `left` or `right`) specify where the element should appear in relation to its containing element.
-
-In this example, the heading has been positioned at the top of the page and 500 pixels from its left edge. The width of the heading is set to be 250 pixels wide. The `width` property has also been applied to the `<p>` elements in this example to prevent the text from overlapping and becoming unreadable.
+In the example below the heading has been positioned at the top of the page and 500 pixels from its left edge. The width of the heading is set to be 250 pixels wide. The paragraphs start at the top of the screen (as if the heading was not there.)
 
 ```html
 <body>
   <h1>Positioning</h1>
+  <p>
+
+  </p>
+
   <p>
 
   </p>
@@ -308,26 +308,22 @@ h1 {
   left: 500px;
   width: 250px;
 }
-
-p {
-  width: 450px;
-}
 ```
 
-TODO: IMAGE OF EXAMPLE
+![Absolute position](images/absolute_position.png)
 
 #### Fixed positioning
 This is a form of absolute positioning that positions the element in relation to the browser window, as opposed to the containing element. Elements with fixed positioning do not affect the position of surrounding elements and they do not move when the user scrolls up or down the page.
-
-TODO: INSERT IMAGE OF FIXED position
-
-The heading has been placed in the center of the page and 25% from the top of the screen (the rest appears in normal flow).
 
 In the example below, the heading has been positioned to the top left hand corner of the browser window. When the user scrolls down the page, the paragraphs disappear behind the heading. The `<p>` elements are in normal flow and ignore the space that the `<h1>` element would have taken up. Therefore, the `margin-top` property has been used to push the first `<p>` element below where the fixed position `<h1>` element is sitting.
 
 ```html
 <body>
   <h1>Positioning</h1>
+  <p class="example">
+
+  </p>
+
   <p>
 
   </p>
@@ -342,7 +338,7 @@ h1 {
   padding: 10px;
   margin: 0px;
   width: 100%;
-  background-color: #efefef;
+  background-color: lightgray;
 }
 
 p.example {
@@ -350,7 +346,8 @@ p.example {
 }
 
 ```
-TODO: Image of example
+
+![Fixed position](images/fixed_position.png)
 
 #### Floating elements
 Floating an element allows you to take that element out of the normal flow and position it to the far left or right of a containing box. The floated element becomes a block-level element around which other content can flow.
@@ -372,6 +369,10 @@ In the example below, a `<blockquote>` element is used to hold a quotation. It's
   <p>
 
   </p>
+
+  <p>
+
+  </p>
 </body>
 ```
 
@@ -384,10 +385,12 @@ blockquote {
   font-family: Georgia, Times, serif;
   margin: 0px 0px 10px 10px;
   padding: 10px;
-  border-top: 1px solid #665544;
-  border-bottom: 1px solid #665544;
+  border: 1px solid black;
+  background-color: lightblue;
 }
 ```
+
+![Float right](images/float_right.png)
 
 You can use float to place elements side-by-side, if you e.g. would like a design with boxes next to each other.
 
