@@ -356,7 +356,7 @@ Border-style can be amongst other be:
 
 See more styles with examples at  [MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/border-style). The border-color property's value is set using any way of representing color, e.g. hex or rgb. Border-width defines the width of the border, and the value is described using a measure of size, e.g. px. The following code snipped would make a 4px wide dashed and blue border:
 
-```css
+```
 border-width: 4px;
 border-style: dashed;
 border-color: #0060A3;
@@ -364,13 +364,13 @@ border-color: #0060A3;
 
 Instead of defining each property on a separate line, you can use the border shorthand, e.g. for the example above you would write:
 
-```css
+```
 border: 4px dashed #0060A3;
 ```
 
 In addition, you can have different styles for the different sides by adding `-top`, `-bottom`, `-left` or `-right`. E.g. if you want to have dashed borders on the side, while the top and bottom is solid, you would write:
 
-```css
+```
 border-top-style: solid;
 border-bottom-style: solid;
 border-left-style: dashed;
@@ -407,19 +407,19 @@ Now that we know some words, we can put them to use. The CSS properties that aff
 `font-family` is used to define the font family used. If none is defined, the browser's default will be used. When defining font family, you should define fallback families, in case the first one is not present on the client. It is possible to add fonts from e.g. Google fonts, the chosen font then doesn't have to be present on the client. Most often locally stored fonts are used, e.g. Arial and Georgia (which are considered web safe fonts because they are installed on all clients).
 
 The `font-family` property is written like this:
-```css
+```
 font-family: Georgia, Times New Roman, serif;
 ```
 Notice the `serif` value at the end. This says that "if any of the preceding fonts are not available, choose the browser's default serif font."
 
 `font-weight` are written like this:
-```css
+```
 font-weight: bold;
 ```
 
 `font-size` takes a size as a value. It is easiest to start out with px.
 
-```css
+```
 font-size: 22px;
 ```
 
@@ -437,7 +437,7 @@ Should you want to horizontally align the text, you should use the `text-align` 
 
 Use the `color` property to set the color of the font. How to do this is described under the color chapter. In short, your write:
 
-```css
+```
 color: darkgrey;
 ```
 
