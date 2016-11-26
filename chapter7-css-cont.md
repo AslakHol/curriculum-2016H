@@ -445,7 +445,7 @@ In the example below, the fourth paragraph has a class called `clear`. The CSS r
 body {
   width: 750px;
   font-family: Arial, Verdana, sans-serif;
-  color: #665544;
+  color: white;
 }
 
 p {
@@ -453,7 +453,7 @@ p {
   float: left;
   margin: 5px;
   padding: 5px;
-  background-color: #efefef;
+  background-color: yellow;
 }
 
 .clear {
