@@ -362,7 +362,7 @@ border-style: dashed;
 border-color: #0060A3;
 ```
 
-In stead of defining each property on a separate line, you can use the border shorthand, e.g. for the example above you would write:
+Instead of defining each property on a separate line, you can use the border shorthand, e.g. for the example above you would write:
 
 ```css
 border: 4px dashed #0060A3;
