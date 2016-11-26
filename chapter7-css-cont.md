@@ -161,7 +161,7 @@ li.coming-soon {
 }
 ```
 
-TODO: INSERT IMAGE OF EXAMPLE
+![Inline list](images/inline_list.png)
 
 
 ### Hide boxes
@@ -195,7 +195,7 @@ li.coming-soon {
 }
 ```
 
-TODO: INSERT IMAGE OF EXAMPLE
+![List with hidden element](images/hidden_element_list.png)
 
 ### Document flow
 In addition to styling elements, CSS can manipulate how the elements flow. The flow refers to how the element follow each other in the document, and how they behave next to each other. Each element has a default rule, e.g. block elements will start on a new line, while the inline elements will continue on the same line. This behavior can be changed using the CSS properties `float`, `position` and `z-index`.
