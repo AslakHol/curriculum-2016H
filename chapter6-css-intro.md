@@ -61,7 +61,7 @@ Inline styling is when you write your style directly on the element, e.g. in you
 ```
 ... which would render:
 
-<p style="color: orange; font-family: arial, sans-serif; font-size: 16px;">This is some styled paragraph!</p>
+![A styled paragraph](images/inline_style.png)
 
 There is a, perhaps obvious, drawback to this method. In the cases where you would want the same style on several paragraphs you would have to copy the style. If you then later would like to change the style, you would have to change it on all the places it was used. Using classes you only have to write a set of rules once.
 
