@@ -211,7 +211,7 @@ Every block element appears on a new line, causing each item to appear lower dow
 
 In normal flow, each block-level element sits on top of the next one. Since this is the default way in which browsers treat HTML elements, you do not need a CSS property to indicate that elements should appear in normal flow, but the syntax would be `position: static;`.
 
-In the example below, the width property for the heading has not been specified, so you can see how it stretches the width of the entire body element by default. The paragraphs are restricted to 300 pixels wide. This shows how the elements in normal flow start on a new line even if they do not take up the full width of the body element. <i>All of the examples demonstrated in this section, and the rest about document flow, will use a similar HTML structure.</i>
+In the example below, the width property for the heading has not been specified, so you can see how it stretches the width of the entire body element by default. The paragraphs are restricted to 300 pixels wide. This shows how the elements in normal flow start on a new line even if they do not take up the full width of the body element. <i>All of the examples demonstrated in this section, and the rest about document flow, will use a similar HTML and CSS structure.</i>
 
 ```html
 <body>
@@ -252,20 +252,20 @@ p {
 ![Normal flow](images/normal_flow.png)
 
 #### Relative positioning
-This moves an element from the position it will be in normal flow, shifting it to the top, right, bottom, or left of where it would have been placed. This does not affect the position of surrounding elements; they stay in the position they would be in in normal flow.
-
-TODO: INSERT IMAGE OF REALTIVE PSOTIONSNIGN
-
-The second paragraph has been pushed down and right from where it would otherwise have been in a normal flow.
-
-Relative positioning moves an element in relation to where it would have been in normal flow. E.g., you can move it 10 pixels lower than it would have been in normal flow, or 20% to the right. You can indicate that an element should be relatively positioned using the `position` property with the value `relative`.
+Relative positioning moves an element in relation to where it would have been in normal flow. E.g., you can move it 10 pixels lower than it would have been in normal flow, or 20% to the right. You can indicate that an element should be relatively positioned using the `position` property with the value `relative`. Positioning and element with relative positioning does not affect surrounding elements; they stay in the position they would be in normal flow.
 
 You then use the offset properties (`top`, `bottom`, `left` or `right`) to indicate how far to move the element from where it would have been in normal flow. To move the box up or down, you can use either the `top` or `bottom` properties. To move the box horizontally you can use either the `left` or `right` properties. The values of the box offset properties are usually given in pixels, percentages or ems.
+
+In the example below the second paragraph has been pushed down and right from where it would otherwise have been in a normal flow.
 
 ```html
 <body>
   <h1>Positioning</h1>
   <p>
+
+  </p>
+
+  <p class="example">
 
   </p>
 </body>
@@ -279,7 +279,7 @@ p.example{
 }
 ```
 
-TODO: IMAGE OF EXAMPLE
+![Relative Position](images/relative_position.png)
 
 #### Absolute positioning
 This positions the element in relation to its containing element. It is taken out of normal flow, meaning that it does not affect the position of any surrounding elements (as they simply ignore the space it would have taken up). Absolutely positioned elements move as users scroll up and down the page.
