@@ -8,6 +8,8 @@ The `list-style-type` property allows you to control the shape or style of a bul
 
 For an unordered list you can use the following values:
 
+<!-- Github strips CSS from MD files they render, so this won't display properly to the reader -->
+
 <ul>
   <li style="list-style-type: none;">none</li>
   <li style="list-style-type: disc;">disc</li>
@@ -34,6 +36,8 @@ The code for this list looks like this:
 ```
 
 For an ordered (numbered) list you can use the following values:
+
+<!-- Github strips CSS from MD files they render, so this won't display properly to the reader -->
 
 <ol>
   <li style="list-style-type: decimal;">decimal</li>
@@ -90,11 +94,11 @@ Lists are indented into the page by default and the `list-style-position` proper
 ```html
 <ul class="outside">
   <li>It's really hard to come up with something funny to write in these list elements.</li>
-  <li>Thus I wrote this boring text in stead. The width of the list has been limited to 250 px, so that you see the effect of outside vs inside.</li>
+  <li>Thus I wrote this boring text instead. The width of the list has been limited to 250 px, so that you see the effect of outside vs inside.</li>
 </ul>
 <ul class="inside">
   <li>It's really hard to come up with something funny to write in these list elements.</li>
-  <li>Thus I wrote this boring text in stead. The width of the list has been limited to 250 px, so that you see the effect of outside vs inside.</li>
+  <li>Thus I wrote this boring text instead. The width of the list has been limited to 250 px, so that you see the effect of outside vs inside.</li>
 </ul>
 ```
 
@@ -107,6 +111,10 @@ ul.inside {
   list-style-position: inside;
 }
 ```
+
+![Inside/Outside list](images/outsideinsidelist.png)
+
+<!-- Github strips CSS from MD files they render, so this won't display properly to the reader -->
 
 <ul style="list-style-position: outside">
   <li>It's really hard to come up with something funny to write in these list elements.</li>
@@ -153,7 +161,7 @@ li.coming-soon {
 }
 ```
 
-TODO: INSERT IMAGE OF EXAMPLE
+![Inline list](images/inline_list.png)
 
 
 ### Hide boxes
@@ -187,7 +195,7 @@ li.coming-soon {
 }
 ```
 
-TODO: INSERT IMAGE OF EXAMPLE
+![List with hidden element](images/hidden_element_list.png)
 
 ### Document flow
 In addition to styling elements, CSS can manipulate how the elements flow. The flow refers to how the element follow each other in the document, and how they behave next to each other. Each element has a default rule, e.g. block elements will start on a new line, while the inline elements will continue on the same line. This behavior can be changed using the CSS properties `float`, `position` and `z-index`.
@@ -201,15 +209,17 @@ CSS has the following position schemes that allow you to control the layout of a
 #### Normal flow
 Every block element appears on a new line, causing each item to appear lower down on the page than the previous one. Even if you specify the width of the boxes and there is space for two elements to sit side-by-side, they will not appear next to each other. This is the default behavior (unless you tell the browser to do something else).
 
-TODO: INSERT IMAGE OF NORMAL FLOW
-
 In normal flow, each block-level element sits on top of the next one. Since this is the default way in which browsers treat HTML elements, you do not need a CSS property to indicate that elements should appear in normal flow, but the syntax would be `position: static;`.
 
-In the example below, the width property for the heading has not been specified, so you can see how it stretches the width of the entire browser window by default. The paragraphs are restricted to 450 pixels wide. This shows how the elements in normal flow start on a new line even if they do not take up the full width of the browser window. <i>All of the examples demonstrated in this section, and the rest about document flow, will use a similar HTML structure.</i>
+In the example below, the width property for the heading has not been specified, so you can see how it stretches the width of the entire body element by default. The paragraphs are restricted to 300 pixels wide. This shows how the elements in normal flow start on a new line even if they do not take up the full width of the body element. <i>All of the examples demonstrated in this section, and the rest about document flow, will use a similar HTML and CSS structure.</i>
 
 ```html
 <body>
   <h1>Positioning</h1>
+  <p>
+
+  </p>
+
   <p>
 
   </p>
@@ -220,35 +230,42 @@ In the example below, the width property for the heading has not been specified,
 body {
     width: 750px;
     font-family: Arial, Verdana, sans-serif;
-    color: #040404;
-    background-color: #FCFCFC;
+    color: black;
+    border: 1px solid;
+    border-color: black;
 }
 
 h1 {
-  background-color: #EFEFEF;
+  background-color: lightgray;
   padding: 10px;
 }
 
 p {
-  width: 450px;
+  width: 300px;
+  height: 25px;
+  background-color: yellow;
+  border-color: black;
+  border: 1px solid;
 }
 ```
 
+![Normal flow](images/normal_flow.png)
+
 #### Relative positioning
-This moves an element from the position it will be in normal flow, shifting it to the top, right, bottom, or left of where it would have been placed. This does not affect the position of surrounding elements; they stay in the position they would be in in normal flow.
-
-TODO: INSERT IMAGE OF REALTIVE PSOTIONSNIGN
-
-The second paragraph has been pushed down and right from where it would otherwise have been in a normal flow.
-
-Relative positioning moves an element in relation to where it would have been in normal flow. E.g., you can move it 10 pixels lower than it would have been in normal flow, or 20% to the right. You can indicate that an element should be relatively positioned using the `position` property with the value `relative`.
+Relative positioning moves an element in relation to where it would have been in normal flow. E.g., you can move it 10 pixels lower than it would have been in normal flow, or 20% to the right. You can indicate that an element should be relatively positioned using the `position` property with the value `relative`. Positioning and element with relative positioning does not affect surrounding elements; they stay in the position they would be in normal flow.
 
 You then use the offset properties (`top`, `bottom`, `left` or `right`) to indicate how far to move the element from where it would have been in normal flow. To move the box up or down, you can use either the `top` or `bottom` properties. To move the box horizontally you can use either the `left` or `right` properties. The values of the box offset properties are usually given in pixels, percentages or ems.
+
+In the example below the second paragraph has been pushed down and right from where it would otherwise have been in a normal flow.
 
 ```html
 <body>
   <h1>Positioning</h1>
   <p>
+
+  </p>
+
+  <p class="example">
 
   </p>
 </body>
@@ -262,22 +279,22 @@ p.example{
 }
 ```
 
-TODO: IMAGE OF EXAMPLE
+![Relative Position](images/relative_position.png)
 
 #### Absolute positioning
-This positions the element in relation to its containing element. It is taken out of normal flow, meaning that it does not affect the position of any surrounding elements (as they simply ignore the space it would have taken up). Absolutely positioned elements move as users scroll up and down the page.
+This positions the element in relation to its closest positioned (not static) parent. It is taken out of normal flow, meaning that it does not affect the position of any surrounding elements (as they simply ignore the space it would have taken up). Absolutely positioned elements move as users scroll up and down the page.
 
-TODO: INSERT IMAGE OF ABSOUTE positioning
+When the `position` property is given a value of `absolute` the box is taken out of normal flow and no longer affects the position of other elements on the page (they act like it is not there). The box offset properties (`top`, `bottom`, `left` or `right`) specify where the element should appear in relation to its containing element.
 
-The heading is positioned to the top right, and the paragraphs start at the top of the screen (as if the heading were not there).
-
-When the `position` property is given a value of `absolute`. the box is taken out of normal flow and no longer affects the position of other elements on the page (they act like it is not there). The box offset properties (`top`, `bottom`, `left` or `right`) specify where the element should appear in relation to its containing element.
-
-In this example, the heading has been positioned at the top of the page and 500 pixels from its left edge. The width of the heading is set to be 250 pixels wide. The `width` property has also been applied to the `<p>` elements in this example to prevent the text from overlapping and becoming unreadable.
+In the example below the heading has been positioned at the top of the page and 500 pixels from its left edge. The width of the heading is set to be 250 pixels wide. The paragraphs start at the top of the screen (as if the heading was not there.)
 
 ```html
 <body>
   <h1>Positioning</h1>
+  <p>
+
+  </p>
+
   <p>
 
   </p>
@@ -291,26 +308,22 @@ h1 {
   left: 500px;
   width: 250px;
 }
-
-p {
-  width: 450px;
-}
 ```
 
-TODO: IMAGE OF EXAMPLE
+![Absolute position](images/absolute_position.png)
 
 #### Fixed positioning
 This is a form of absolute positioning that positions the element in relation to the browser window, as opposed to the containing element. Elements with fixed positioning do not affect the position of surrounding elements and they do not move when the user scrolls up or down the page.
-
-TODO: INSERT IMAGE OF FIXED position
-
-The heading has been placed in the center of the page and 25% from the top of the screen (the rest appears in normal flow).
 
 In the example below, the heading has been positioned to the top left hand corner of the browser window. When the user scrolls down the page, the paragraphs disappear behind the heading. The `<p>` elements are in normal flow and ignore the space that the `<h1>` element would have taken up. Therefore, the `margin-top` property has been used to push the first `<p>` element below where the fixed position `<h1>` element is sitting.
 
 ```html
 <body>
   <h1>Positioning</h1>
+  <p class="example">
+
+  </p>
+
   <p>
 
   </p>
@@ -325,7 +338,7 @@ h1 {
   padding: 10px;
   margin: 0px;
   width: 100%;
-  background-color: #efefef;
+  background-color: lightgray;
 }
 
 p.example {
@@ -333,7 +346,8 @@ p.example {
 }
 
 ```
-TODO: Image of example
+
+![Fixed position](images/fixed_position.png)
 
 #### Floating elements
 Floating an element allows you to take that element out of the normal flow and position it to the far left or right of a containing box. The floated element becomes a block-level element around which other content can flow.
@@ -355,6 +369,10 @@ In the example below, a `<blockquote>` element is used to hold a quotation. It's
   <p>
 
   </p>
+
+  <p>
+
+  </p>
 </body>
 ```
 
@@ -367,10 +385,12 @@ blockquote {
   font-family: Georgia, Times, serif;
   margin: 0px 0px 10px 10px;
   padding: 10px;
-  border-top: 1px solid #665544;
-  border-bottom: 1px solid #665544;
+  border: 1px solid black;
+  background-color: lightblue;
 }
 ```
+
+![Float right](images/float_right.png)
 
 You can use float to place elements side-by-side, if you e.g. would like a design with boxes next to each other.
 
@@ -389,7 +409,7 @@ When elements are floated, the height of the boxes can affect where the followin
 body {
   width: 750px;
   font-family: Arial, Verdana, sans-serif;
-  color: #665544;
+  color: white;
 }
 
 p {
@@ -397,11 +417,11 @@ p {
   float: left;
   margin: 5px;
   padding: 5px;
-  background-color: #efefef;
+  background-color: yellow;
 }
 ```
 
-TODO: IMage of example
+TODO: IMAGE OF EXAMPLE
 
 Setting the height of the paragraphs to be the same height as the tallest paragraph would solve this issue, but it is rarely suited to real world designs where the amount of text in a paragraph or column may vary. It is more common to use the `clear` property (discussed further down) to solve this.
 
@@ -425,7 +445,7 @@ In the example below, the fourth paragraph has a class called `clear`. The CSS r
 body {
   width: 750px;
   font-family: Arial, Verdana, sans-serif;
-  color: #665544;
+  color: white;
 }
 
 p {
@@ -433,13 +453,16 @@ p {
   float: left;
   margin: 5px;
   padding: 5px;
-  background-color: #efefef;
+  background-color: yellow;
 }
 
 .clear {
   clear: left;
 }
 ```
+
+TODO: IMAGE OF EXAMPLE
+
 
 #### Z-index
 When you use relative, fixed or absolute positioning, boxes can overlap. If boxes do overlap, the elements that appear later in the HTML code sit on top of those that are earlier in the page.
@@ -455,7 +478,6 @@ What will the color of the intro element be?
 
 ```HTML
 <body>
-
   <h1>Hello inheritance</h1>
   <p class="intro">
     Let me introduce you to the world of inheritance.
@@ -479,11 +501,12 @@ h1{
 }
 
 .intro{
-  color: #FAA21B;
+  color: orange;
 }
 ```
+![Inheritance](images/inheritance.png)
 
-That is correct, as intro has specified it's own `color` property, that rule will be chosen (because it's more specific).
+Orange is correct. Since intro has specified it's own `color` property, that rule will be chosen (because it's more specific).
 
 ### More pseudo classes
 In the previous chapter you learned the pseudo classes to style something on hover. In this chapter you will learn some more. We start with refreshing the syntax:
@@ -502,13 +525,13 @@ In a list with list elements, the following code would affect every odd numbered
 
 ```HTML
 <ul>
-  <li>li:nth-child(2n+1)</li>
-  <li>li:nth-child(odd)</li>
-  <li>li:nth-child(2n)</li>
-  <li>li:nth-child(even)</li>
-  <li>li:nth-child(0n+1)</li>
-  <li>li:nth-child(1)</li>
-  <li>li:nth-child(-n+3)</li>
+  <li>1</li>
+  <li>2</li>
+  <li>3</li>
+  <li>4</li>
+  <li>5</li>
+  <li>6</li>
+  <li>7</li>
 </ul>
 ```
 
@@ -517,6 +540,9 @@ li:nth-child(2n+1){
   color: blue;
 }
 ```
+
+![Odd numbered list](images/odd_list.png)
+
 
 * **tr:nth-child(2n+1)**  
 Represents the odd rows of an HTML table.
@@ -542,6 +568,8 @@ li:last-child {
   color: blue;
 }
 ```
+
+![Last child](images/last_child.png)
 
 #### :required
 The `:required` pseudo class represents any `<input>` element that has the `required` attribute set on it. This allows forms to easily indicate which fields must have valid data before the form can be submitted.
@@ -599,7 +627,9 @@ input:enabled {
 The :disabled pseudo class represents any disabled element. An element is disabled if it can't be activated (e.g. selected, clicked on or accept text input) or accept focus. The element also has an enabled state, in which it can be activated or accept focus.
 
 ```css
-input[type="text"]:disabled { background: #ccc; }
+input[type="text"]:disabled {
+   background: #ccc;
+ }
 ```
 
 #### :valid and :invalid
@@ -636,10 +666,18 @@ The :lang pseudo class matches elements based on the language the element is det
 ```
 
 ```css
-:lang(en) > q { quotes: '\201C' '\201D' '\2018' '\2019'; }
-:lang(fr) > q { quotes: '« ' ' »'; }
-:lang(de) > q { quotes: '»' '«' '\2039' '\203A'; }
+:lang(en) > q {
+   quotes: '\201C' '\201D' '\2018' '\2019';
+ }
+:lang(fr) > q {
+   quotes: '« ' ' »';
+}
+:lang(de) > q {
+   quotes: '»' '«' '\2039' '\203A';
+}
 ```
+
+![Different language quotes](images/quotes_language.png)
 
 ### Overflow
 The overflow property specifies whether to clip content, render scrollbars or just display content when it overflows its block level container.

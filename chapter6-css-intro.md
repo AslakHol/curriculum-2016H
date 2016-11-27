@@ -6,7 +6,7 @@ To understand how CSS works, you can imagine that there is an invisible box arou
 
 In the images below you can see a HTML page. On the left side, you see how it would have been rendered in a browser. On the right side I have added outlines to each element so that you can see how CSS will treat each element as if it lives inside its own box. The block level elements are shown with an orange border, and inline elements have a blue border.
 
-![Block and inline elements](images/blockinlineelements.png)
+![Block and inline elements](images/block_inline_elements.png)
 
 ### Syntax
 Each block of code is called a rule, and defines some style for an element. Each rule consists of a selector, choosing what element(s) to style, a property and a value. A rule looks like this:
@@ -61,7 +61,7 @@ Inline styling is when you write your style directly on the element, e.g. in you
 ```
 ... which would render:
 
-<p style="color: orange; font-family: arial, sans-serif; font-size: 16px;">This is some styled paragraph!</p>
+![A styled paragraph](images/inline_style.png)
 
 There is a, perhaps obvious, drawback to this method. In the cases where you would want the same style on several paragraphs you would have to copy the style. If you then later would like to change the style, you would have to change it on all the places it was used. Using classes you only have to write a set of rules once.
 
@@ -197,7 +197,7 @@ Remember that there is a case of precedence with classes and IDs. As IDs are mor
 <div class="class-name" id="id-name">Some text</div>
 ```
 
-the font color, described by the property `color` and the following value, would be black. It does not matter if the ID rule is written before or after the class rule.
+The font color, described by the property `color` and the following value, would be black. It does not matter if the ID rule is written before or after the class rule.
 
 It might seem silly to have two ways of referencing an element. After all, classes can be used to reference one element (but not vice versa). There are some advantages to using IDs that should be noted. As it only references one element, they are more efficient to use, compared to classes. This is because with classes the entire DOM has to be scanned for the element, while when the ID is found, there is no longer necessary to look for it. When we will learn about JavaScript, you will also see that IDs are necessary to reference the correct element to manipulate (more on that later).
 
@@ -219,7 +219,7 @@ There is no problem, as seen above, to combine classes and IDs. You can then hav
 ```
 
 #### Other selectors
-You have now seen how we select classes and IDs, but it is possible to select several element at once, or select child elements. Just watch!
+You have now seen how we select classes and IDs, but it is possible to select several element at once, or select child elements.
 
 ##### Universal selector
 The `*` selector applies to all elements in the document.
@@ -326,7 +326,7 @@ There is an ocean of possibilities when choosing a color. You will find colors t
 All HTML elements can be considered a box, and each box (HTML element) has the properties margin, border, padding and content. Together these properties is called the box model.
 
 #### The box model
-![Box model](images/box_model.svg "Box model")
+![Box model](images/box_model.svg)
 
 The content area is the area that contains the content of the element, e.g. text or image. It can have a background color or an image (an image will hide the background color). Text and images are located inside the content edge. If the CSS box-sizing property is set to default, the properties width, min-width, max-width, height, min-height and max-height control the content size. If you do not specify at least one pair of these properties, the content's size will determine the size.
 
@@ -356,21 +356,21 @@ Border-style can be amongst other be:
 
 See more styles with examples at  [MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/border-style). The border-color property's value is set using any way of representing color, e.g. hex or rgb. Border-width defines the width of the border, and the value is described using a measure of size, e.g. px. The following code snipped would make a 4px wide dashed and blue border:
 
-```CSS
+```
 border-width: 4px;
 border-style: dashed;
 border-color: #0060A3;
 ```
 
-In stead of defining each property on a separate line, you can use the border shorthand, e.g. for the example above you would write:
+Instead of defining each property on a separate line, you can use the border shorthand, e.g. for the example above you would write:
 
-```css
+```
 border: 4px dashed #0060A3;
 ```
 
 In addition, you can have different styles for the different sides by adding `-top`, `-bottom`, `-left` or `-right`. E.g. if you want to have dashed borders on the side, while the top and bottom is solid, you would write:
 
-```css
+```
 border-top-style: solid;
 border-bottom-style: solid;
 border-left-style: dashed;
@@ -389,11 +389,7 @@ First we need to talk a bit about typeface terminology:
 #### Terminology
 Firstly, there are three typeface classifications you should know about (even though there are several more), namely <i>serif</i>, <i>sans-serif</i> and <i>monospace</i>.
 
-<p style="Font-family: Georgia">Serif fonts have extra detail on the ends of the main strokes of the letteres. These details are known as serifs. In print, serif fonts were traditionally used for long texts because they where considered easier to read. The font family used for this paragraph is Georgia.</p>
-
-<p style="Font-family: Helvetica">Sans-serif fonts have straight ends to letters, and therefore have a much cleaner design. Screens have a lower resolution than print. So, if the text is small, sans-serif fonts can be clearer to read. The font family used for this paragraph is Helvetica</p>
-
-<p style="Font-family: Courier">Every letter in a monospaced (or fixed width) font is the same width (non-monospace fonts have different widths). Monospace fonts are commonly used for code because they align nicely, making the text easier to follow. The font family used for this paragraph is Courier.</p>
+![Text with different fonts](images/different_font_text.png)
 
 Secondly, font families can have different weights and styles. The weights are <i>light</i>, <i>medium</i>, <i>regular</i>, <i>bold</i> and <i>black</i>, and describes the thickness of the font. The style of the font can be <i>normal</i>, <i>italic</i> or <i>oblique</i>. We also have size, how large each letter is.
 
@@ -411,19 +407,19 @@ Now that we know some words, we can put them to use. The CSS properties that aff
 `font-family` is used to define the font family used. If none is defined, the browser's default will be used. When defining font family, you should define fallback families, in case the first one is not present on the client. It is possible to add fonts from e.g. Google fonts, the chosen font then doesn't have to be present on the client. Most often locally stored fonts are used, e.g. Arial and Georgia (which are considered web safe fonts because they are installed on all clients).
 
 The `font-family` property is written like this:
-```css
+```
 font-family: Georgia, Times New Roman, serif;
 ```
 Notice the `serif` value at the end. This says that "if any of the preceding fonts are not available, choose the browser's default serif font."
 
 `font-weight` are written like this:
-```css
+```
 font-weight: bold;
 ```
 
 `font-size` takes a size as a value. It is easiest to start out with px.
 
-```css
+```
 font-size: 22px;
 ```
 
@@ -441,7 +437,7 @@ Should you want to horizontally align the text, you should use the `text-align` 
 
 Use the `color` property to set the color of the font. How to do this is described under the color chapter. In short, your write:
 
-```css
+```
 color: darkgrey;
 ```
 
