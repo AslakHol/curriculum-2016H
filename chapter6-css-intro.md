@@ -326,7 +326,7 @@ There is an ocean of possibilities when choosing a color. You will find colors t
 All HTML elements can be considered a box, and each box (HTML element) has the properties margin, border, padding and content. Together these properties is called the box model.
 
 #### The box model
-![Box model](images/box_model.svg)
+![Box model](images/box_model.png)
 
 The content area is the area that contains the content of the element, e.g. text or image. It can have a background color or an image (an image will hide the background color). Text and images are located inside the content edge. If the CSS box-sizing property is set to default, the properties width, min-width, max-width, height, min-height and max-height control the content size. If you do not specify at least one pair of these properties, the content's size will determine the size.
 
